@@ -22,8 +22,8 @@ Pilha::~Pilha(){
 
 void Pilha::inserir(int elemento){
     if(estaCheia()) throw QString("Erro: pilha cheia.");
-    vetor[topo] = elemento;
     topo++;
+    vetor[topo] = elemento;
 }
 
 int Pilha::acessar() const{
