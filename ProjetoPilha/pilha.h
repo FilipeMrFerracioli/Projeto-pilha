@@ -1,7 +1,9 @@
 #ifndef PILHA_H
 #define PILHA_H
 
-namespace mamaefalei {
+#include <QString>
+
+namespace lambancinha {
 class Pilha
 {
 private:
@@ -10,6 +12,7 @@ private:
     int *vetor;
 public:
     Pilha(int tamanho);
+    ~Pilha();
     void inserir(int elemento);
     int acessar() const;
     void retirar();
