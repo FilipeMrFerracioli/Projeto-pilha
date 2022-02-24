@@ -21,15 +21,18 @@ Pilha::~Pilha(){
 }
 
 void Pilha::inserir(int elemento){
-
+    if(estaCheia()) throw QString("Erro: pilha cheia.");
+    vetor[topo] = elemento;
+    topo++;
 }
 
 int Pilha::acessar() const{
-
+    return vetor[topo];
 }
 
 void Pilha::retirar(){
-
+    if(estaVazia()) throw QString("Erro: pilha vazia.");
+    topo--;
 }
 
 bool Pilha::estaCheia() const{
@@ -41,7 +44,7 @@ bool Pilha::estaVazia() const{
 }
 
 int Pilha::quantidadeElementos() const{
-
+    return topo + 1;
 }
 
 }
