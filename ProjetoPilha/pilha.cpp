@@ -33,11 +33,11 @@ void Pilha::retirar(){
 }
 
 bool Pilha::estaCheia() const{
-
+    return (topo == (tamanho - 1));
 }
 
 bool Pilha::estaVazia() const{
-
+    return (topo == -1);
 }
 
 int Pilha::quantidadeElementos() const{
