@@ -27,6 +27,7 @@ void Pilha::inserir(int elemento){
 }
 
 int Pilha::acessar() const{
+    if(estaVazia()) throw QString("Erro: pilha vazia.");
     return vetor[topo];
 }
 

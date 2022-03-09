@@ -12,71 +12,74 @@ int main(int argc, char *argv[])
     try {
         lambancinha::Pilha pilha(tamanho);
 
-        //* 1  teste se a pilha esta cheia - resposta nao
-        std::cout << "\n";
-        std::cout << "Cheia: " << pilha.estaCheia();
-        //* 2  teste se a pila esta vazia - resposta sim
-        std::cout << "\n";
-        std::cout << "Vazia: " << pilha.estaVazia();
-        //* 3  teste quantidade de elementos - resposta 0
-        std::cout << "\n";
-        std::cout << "Qtd elem: " << pilha.quantidadeElementos();
-        //* 4  inserir 2 elementos
-        std::cout << "\n";
-        std::cout << "inserir 2 elementos: (15, 20)";
+        // 1 - pilha cheia = não
+        std::cout << "\nCheia: " << pilha.estaCheia();
+
+
+        // 2 - pilha vazia = sim
+        std::cout << "\nVazia: " << pilha.estaVazia();
+
+        // 3 - Quantidade de elementos = 0
+        std::cout << "\nQtd elementos: " << pilha.quantidadeElementos();
+
+        // 4 - Inserir 2 elementos
+        std::cout << "\nInserir 2 elementos: (15, 20)";
         pilha.inserir(15);
         pilha.inserir(20);
-        //* 5  teste se a pilha esta cheia - resposta nao
-        std::cout << "\n";
-        std::cout << "Cheia: " << pilha.estaCheia();
-        //* 6  teste se a pila esta vazia - resposta nao
-        std::cout << "\n";
-        std::cout << "Vazia: ";
-        std::cout << "Vazia: " << pilha.estaVazia();
-        //* 7  teste quantidade de elementos - resposta 2
-        std::cout << "\n";
-        std::cout << "Qtd elem: " << pilha.quantidadeElementos();
+        std::cout << "\nElementos inseridos: " << pilha.acessar();
 
-        //* 8  inserir 2 elementos
-        std::cout << "\n";
-        std::cout << "Inserir 2 elem (16, 21): ";
+        // 5 - pilha cheia = não
+        std::cout << "\nCheia: " << pilha.estaCheia();
+
+        // 6 - pilha vazia = não
+        std::cout << "\nVazia: " << pilha.estaVazia();
+
+        // 7 - Quantidade de elementos = 2
+        std::cout << "\nQtd elementos: " << pilha.quantidadeElementos();
+
+        // 8 - Inserir 2 elementos = 4
+        std::cout << "\nInserir 2 elementos: (16, 21)";
         pilha.inserir(16);
         pilha.inserir(21);
-        //* 9  teste se a pilha esta cheia - resposta sim
-        std::cout << "\n";
-        std::cout << "Cheia: " << pilha.estaCheia();
-        //* 10 teste se a pila esta vazia - resposta nao
-        std::cout << "\n";
-        std::cout << "Vazia: " << pilha.estaVazia();
-        //* 11 teste quantidade de elementos - resposta
-        std::cout << "\n";
-        std::cout << "Qtd elem: " << pilha.quantidadeElementos();
-        //*** 12 inserir 1 elemento - resposta mensagem de erro
-        std::cout << "\n";
-        //std::cout << "erro: ";
-        //pilha.inserir(33);
-        //* 13 colocar como comentario o teste 13
-        //* 14 acessar o elemento da pilha - resposta valor do último elemento inserido
-        std::cout << "\n";
-        std::cout << "Ultimo valor inserido: " << pilha.acessar();
+        std::cout << "\nElementos inseridos: " << pilha.acessar();
 
-        //* 15 retirar o elemento da pilha
-        std::cout << "\n";
-        std::cout << "Retirar ";
+        // 9 - pilha cheia = sim
+        std::cout << "\nCheia: " << pilha.estaCheia();
+
+        // 10 - pilha vazia = não
+        std::cout << "\nVazia: " << pilha.estaVazia();
+
+        // 11 - Quantidade de elementos = 4
+        std::cout << "\nQtd elementos: " << pilha.quantidadeElementos();
+
+        // 12 - Inserir 1 elementos = erro
+        /*std::cout << "\nInserir 2 elementos: (33)";
+        pilha.inserir(33);*/
+
+        // 13 - Colocar como comentário o item 12
+
+        // 14 - Acessar a pilha = último elemento inserido = 21
+        std::cout << "\nUltimo valor inserido: " << pilha.acessar();
+
+        // 15 - retirar elemento da pilha
+        std::cout << "\nRetirar";
         pilha.retirar();
-        //* 16 acessar o elemento da pilha - valor do penultimo elemento inserido
-        std::cout << "\n";
-        std::cout << "Penultimo valor inserido: "<<        pilha.acessar();
-        //*** 17 retirar 4 elementos - mensagem de erro
+
+        // 16 - Acessar a pilha = último elemento inserido = 16
+        std::cout << "\nPenultimo valor inserido: " << pilha.acessar();
+
+        // 17 - Retirar quatro elementos = erro
         std::cout << "\nRetirar 4";
         pilha.retirar();
         pilha.retirar();
         pilha.retirar();
         //pilha.retirar();
-        //* 18 modificar a retirada para 3 elementos
-        //* 19 acessar a pilha - resposta erro a pilha esta vazia
-        std::cout << "\n";
-        std::cout << "Acessar pilha "<<        pilha.acessar();
+
+        // 18 - Modificar a retirada para 3 elementos (item 17)
+
+        // 19 - Acessar a pila = erro-pilha vazia
+        std::cout << "\nAcessar pilha";
+        pilha.acessar();
 
     }  catch (QString &erro) {
         std::cout << "\nErro: falha na pilha" << erro.toStdString() << "\n";
